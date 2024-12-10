@@ -57,12 +57,130 @@ table {
   border-spacing: 0;
 }
 
-/* ---------------------------- min css starter ---------------------------- */
+/* ------------------------------------------------ Min css starter ------------------------------------------------ */
 body {
-    background-color: #F3F3F3;
-    font-size: 1rem;
-    font-family: inter, sans-serif;
-    font-weight: 250;
-    line-height: 1.5rem;
-    overflow-x: hidden;
+  background-color: #f3f3f3;
+  font-size: 1rem;
+  font-family: "alata", sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+/* -- navigation -- */
+nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  background-color: black;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* -- logo -- */
+.lille-logo {
+  grid-area: "lille-logo";
+  width: auto;
+  max-width: 10%;
+}
+
+/* -- Skjul menupunkter, søg/profil ikoner, stort logo og checkboxen -- */
+.menupunkter,
+.ikoner,
+.stort-logo,
+#burgermenu {
+  display: none;
+}
+
+/* -- Burgermenu-ikon styling (åbner menuen) -- */
+.menu-ikon {
+  display: block;
+  width: 2rem;
+}
+
+.menu-ikon img {
+  width: 120%;
+  height: auto;
+}
+
+/* ------------------------------------------------ Media query for desktops ------------------------------------------------ */
+@media (min-width: 900px) {
+  /* -- Skjul burgermenuen -- */
+  nav {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: "lille-logo stort-logo menupunkter ikoner";
+    background-color: black;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.3rem 1rem;
   }
+
+  .lille-logo {
+    grid-area: lille-logo;
+    width: auto; /* Logoet tilpasses naturligt */
+    max-width: 3rem; /* Reducerer bredden af containeren */
+    height: auto;
+    justify-self: start; /* Placeres mod venstre */
+  }
+
+  .stort-logo {
+    grid-area: "stort-logo";
+    display: block;
+    max-width: 85%;
+    height: auto;
+    justify-self: center;
+    position: relative; /* Gør det muligt at flytte det med margin */
+    margin-bottom: -3rem; /* Flyt logoet nedad ved at bruge en negativ margin */
+    z-index: 1; /* Sørger for, at logoet forbliver synligt over navigationen */
+  }
+
+  .menu-ikon {
+    display: none;
+  }
+
+  .menupunkter {
+    grid-area: "menupunkter";
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+    color: white;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .menupunkter a {
+    text-decoration: none;
+    color: white;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+
+  /* -- søg og profil ikon styling enkeltvis -- */
+  .ikon {
+    width: 2rem;
+    height: auto;
+  }
+
+  /* -- søg og profil ikon styling samlet -- */
+  .ikoner {
+    grid-area: "ikoner";
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+
+  /* -- Vis menu i navigationen -- */
+  .menu-items {
+    display: grid;
+    position: static;
+    grid-area: menu;
+    grid-template-columns: repeat(6, auto);
+    gap: 2rem;
+    justify-content: space-between;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
