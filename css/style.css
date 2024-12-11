@@ -60,12 +60,14 @@ table {
 /* ------------------------------------------------ Min css starter ------------------------------------------------ */
 body {
   background-color: #f3f3f3;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "alata", sans-serif;
   font-weight: 400;
   line-height: 1.5rem;
+  overflow-x: hidden;
 }
 
+/* ------------------------------------------------ navigationsbar ------------------------------------------------ */
 /* -- navigation -- */
 nav {
   display: grid;
@@ -101,9 +103,164 @@ nav {
   height: auto;
 }
 
+/* ------------------------------------------------ forside ------------------------------------------------ */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+/* -- forside billede -- */
+.rod-forsidebillede {
+  max-width: 100vw;
+  height: auto;
+}
+
+/* -- overskrift -- */
+#velkomst-outline-overskrift {
+  font-size: 3rem;
+  color: transparent; /* fjern fyldfarven */
+  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem; /* afstand til næste overskrift */
+  line-height: 1; /* linjeafstand */
+}
+
+#rod-velkomst-overskrift {
+  font-size: 3rem;
+  color: #ce0404;
+  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
+  text-align: center;
+  line-height: 1; /* linjeafstand */
+}
+
+/* -- velkomst tekst mobil -- */
+.forside-tekst {
+  display: grid;
+  text-align: center;
+  line-height: 1.3;
+  margin: 2rem 3rem 0rem 3rem;
+}
+
+#linje-et-velkomst-mobil {
+  margin-bottom: 1rem;
+}
+
+/* -- skjul desktop tekst -- */
+.velkomst-desktop {
+  display: none;
+}
+
+/* -- styling af knap -- */
+.knap-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.forside-knap {
+  background-color: #ce0404;
+  border: 1px solid #ce0404;
+  color: white;
+  font-family: inter, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Skygge */
+}
+
+/* -- event banner -- */
+.banner {
+  max-width: 100vw;
+  margin-top: 1rem;
+}
+
+.bissesvinet-mobil {
+  max-width: 100%;
+  margin-top: -1rem; /* -- fjerner afstanden mellem de to banner -- */
+}
+
+.taw-mobil,
+.asbjorn-mobil {
+  max-width: 100%;
+}
+
+/* -- mobiltekst under billederne -- */
+.bissesvinet-mobiltekst,
+.taw-mobiltekst,
+.asbjorn-mobiltekst {
+  display: grid;
+  text-align: center;
+  padding: 1.5rem 1.5rem 0.2rem 1.5rem;
+}
+
+/* -- frivillig billede -- */
+.emma-minna-mobil {
+  display: grid;
+  margin-top: 2rem;
+  justify-self: center;
+  max-width: 70vw;
+}
+
+.sektion-overskrift {
+  display: grid;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem 2rem; /* -- top/bund & siderne -- */
+}
+
+.brodtekst-mobil {
+  display: grid;
+  margin: 1.5rem 1rem;
+}
+
+/* ------------------------------------------------ footer ------------------------------------------------ */
+.footer-mobil {
+  display: grid;
+  font-family: inter, sans-serif;
+  font-weight: 200;
+  color: white;
+  background-color: black;
+}
+
+.footer-overskrift-mobil {
+  display: grid;
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+
+.footer-tekst-mobil {
+  display: grid;
+  font-size: 1rem;
+  padding: 0 0 2rem 1.5rem; /* -- top, højre, bund, venstre -- */
+  line-height: 1.6;
+}
+
+.some-ikoner {
+  display: grid;
+  padding: 0 1.5rem 1.5rem 1.5rem; /* -- top, højre, bund, venstre -- */
+  max-width: 100vw;
+}
+
+/* -- tilmeld nyhedsbrev -- */
+.email-felt {
+  margin-left: 1.5rem;
+  padding: 0.75rem;
+  border: 2px solid #626262;
+  font-size: 1rem;
+  font-family: inter, sans-serif;
+  color: #ffffff;
+  max-width: 100%;
+  margin-bottom: 10%;
+}
+
 /* ------------------------------------------------ Media query for desktops ------------------------------------------------ */
 @media (min-width: 900px) {
-  /* -- Skjul burgermenuen -- */
+  /* ------------------------------------------------ navigationsbar ------------------------------------------------ */
+  /* -- styling af navigationsbar -- */
   nav {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -114,6 +271,7 @@ nav {
     padding: 0.3rem 1rem;
   }
 
+  /* -- lille logo styling -- */
   .lille-logo {
     grid-area: lille-logo;
     width: auto; /* Logoet tilpasses naturligt */
@@ -122,6 +280,7 @@ nav {
     justify-self: start; /* Placeres mod venstre */
   }
 
+  /* -- stort logo styling -- */
   .stort-logo {
     grid-area: "stort-logo";
     display: block;
@@ -133,10 +292,12 @@ nav {
     z-index: 1; /* Sørger for, at logoet forbliver synligt over navigationen */
   }
 
+  /* -- Skjul burgermenuen -- */
   .menu-ikon {
     display: none;
   }
 
+  /* -- menupunkter styling -- */
   .menupunkter {
     grid-area: "menupunkter";
     display: flex;
@@ -156,6 +317,11 @@ nav {
     font-size: 1.2rem;
   }
 
+  /* -- rød streg under menpunkt ved hover -- */
+  .menupunkter a:hover {
+    text-decoration: underline red;
+  }
+
   /* -- søg og profil ikon styling enkeltvis -- */
   .ikon {
     width: 2rem;
@@ -170,17 +336,13 @@ nav {
     gap: 3rem;
   }
 
-  /* -- Vis menu i navigationen -- */
-  .menu-items {
+  /* ------------------------------------------------ forsiden ------------------------------------------------ */
+  .velkomst-mobil {
+    display: none;
+  }
+
+  /* -- styling af velkomstbesked og billede -- */
+  .velkomst-desktop {
     display: grid;
-    position: static;
-    grid-area: menu;
-    grid-template-columns: repeat(6, auto);
-    gap: 2rem;
-    justify-content: space-between;
-    width: auto;
-    padding: 0;
-    box-shadow: none;
-    background-color: transparent;
   }
 }
