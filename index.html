@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
   </head>
 
-  <!---------------------- body starter ---------------------->
+  <!------------------------------------------ main starter ------------------------------------------>
   <body>
-    <!---------------------- header starter ---------------------->
+    <!------------------------------------------ header starter ------------------------------------------>
     <header>
       <nav>
         <!-- logoer -->
@@ -47,9 +47,9 @@
       </nav>
     </header>
 
-    <!---------------------- main starter ---------------------->
+    <!------------------------------------------ main starter ------------------------------------------>
     <main class="grid-container">
-      <!-- velkomst til mobil -->
+      <!---------------------- velkomst til mobil ---------------------->
       <section class="velkomst-mobil">
         <!-- billede taget af Jens Nordhausen -->
         <img src="img/forsidebillede-rod.png" alt="Billede af publikum" class="rod-forsidebillede" />
@@ -63,74 +63,142 @@
           <p id="linje-et-velkomst-mobil">Et pulserende samlingspunkt for musik, kultur og fællesskab!</p>
           <p>Træd ind, og oplev, hvad der gør Radar til noget helt særligt.</p>
         </div>
+
+        <!---------------------- velkomst til tablet ---------------------->
+        <section class="velkomst-tablet">
+          <div class="forside-tekst-tablet">
+            <p id="forste-linje-tablet">Et pulserende samlingspunkt for musik, kultur og fællesskab.</p>
+            <p class="anden-linje-desktop">Her mødes passionerede kunstnere, engageret publikum og nysgerrige sjæle for at dele unikke oplevelser i inspirerende rammer.</p>
+            <p class="tredje-linje-desktop">
+              Radar er mere end bare en scene – det er et sted, hvor nye idéer fødes, talenter udvikles, og fællesskabet vokser. Vi skaber plads til både det kendte og det nye, det vilde og det
+              intime, og inviterer dig med på en rejse fyldt med nærvær og energi.
+            </p>
+            <p class="fjerde-linje-desktop">Træd ind, og oplev, hvad der gør Radar til noget helt særligt.</p>
+          </div>
+        </section>
+
+        <!-- første knap -->
         <div class="knap-container">
           <a href="om-os.html"><button class="forside-knap">Læs mere</button></a>
         </div>
       </section>
 
-      <!-- velkomst til desktop -->
+      <!---------------------- velkomst til desktop ---------------------->
       <section class="velkomst-desktop">
-        <p>
-          Velkommen til Radar – et pulserende samlingspunkt for musik, kultur og fællesskab. Her mødes passionerede kunstnere, engageret publikum og nysgerrige sjæle for at dele unikke oplevelser i
-          inspirerende rammer. Radar er mere end bare en scene – det er et sted, hvor nye idéer fødes, talenter udvikles, og fællesskabet vokser. Vi skaber plads til både det kendte og det nye, det
-          vilde og det intime, og inviterer dig med på en rejse fyldt med nærvær og energi. Træd ind, og oplev, hvad der gør Radar til noget helt særligt.
-        </p>
+        <img src="img/forsidebillede-rod.png" alt="Billede af publikum" class="rod-forsidebillede-desktop" />
+        <div class="forside-tekst-desktop">
+          <p id="forste-linje-desktop">Velkommen til Radar – et pulserende samlingspunkt for musik, kultur og fællesskab.</p>
+          <p class="anden-linje-desktop">Her mødes passionerede kunstnere, engageret publikum og nysgerrige sjæle for at dele unikke oplevelser i inspirerende rammer.</p>
+          <p class="tredje-linje-desktop">
+            Radar er mere end bare en scene – det er et sted, hvor nye idéer fødes, talenter udvikles, og fællesskabet vokser. Vi skaber plads til både det kendte og det nye, det vilde og det intime,
+            og inviterer dig med på en rejse fyldt med nærvær og energi.
+          </p>
+          <p class="fjerde-linje-desktop">Træd ind, og oplev, hvad der gør Radar til noget helt særligt.</p>
+          <div class="knap-container-desktop">
+            <a href="om-os.html"><button class="forside-knap">Læs mere</button></a>
+          </div>
+        </div>
       </section>
 
+      <!---------------------- koncertforslag mobil og tablet ---------------------->
       <!-- første banner -->
       <section>
-        <a href="#"><img src="img/kommende-events-banner.png" alt="Kommende events banner" class="banner" /></a>
+        <h1 class="kommende-events-banner">KOMMENDE EVENTS</h1>
       </section>
 
-      <!-- koncert forslag -->
       <!-- bissesvinet -->
       <section>
-        <img src="img/artister/bissesvinet-mobil.png" alt="Billede af Bissesvinet" class="bissesvinet-mobil" />
+        <img src="img/artister/bissesvinet-mobil.png" alt="Billede af Bissesvinet" class="banner-mobil" />
+        <img src="img/artister/bissesvinet-desktop.png" alt="Billede af Bissesvinet" class="banner-tablet" />
         <p class="bissesvinet-mobiltekst">Oplev et stævnemøde mellem to af musikscenens mest uregerlige afkom.</p>
         <div class="knap-container">
           <button class="forside-knap">Læs mere</button>
+        </div>
+        <!--desktop-->
+        <div class="bissesvinet-desktop">
+          <img src="img/artister/bissesvinet-desktop.png" alt="Billede af Bissesvinet" class="artist-forside" />
+          <p class="bissesvinet-tekst-desktop">
+            Et stævnemøde mellem to af musikscenens mest uregerlige afkom. De skaber et udtryk, der er elektrisk og bidsk - som en profets guddommelige åbenbaring!
+            <button class="desktop-forside-knap">Læs mere</button>
+          </p>
         </div>
       </section>
 
       <!-- the awesome welles -->
       <section>
-        <img src="img/artister/taw-mobil.png" alt="Billede af The Awesome Welles" class="taw-mobil" />
+        <img src="img/artister/taw-mobil.png" alt="Billede af The Awesome Welles" class="banner-mobil" />
+        <img src="img/artister/taw-desktop.png" alt="Billede af The Awesome Welles" class="banner-tablet" />
         <p class="taw-mobiltekst">Tidløs rock med forkærlighed for analoge og akustiske instrumenter.</p>
         <div class="knap-container">
           <button class="forside-knap">Læs mere</button>
+        </div>
+        <!--desktop-->
+        <div class="taw-desktop">
+          <img src="img/artister/taw-desktop.png" alt="Billede af The Awesome Welles" class="taw-artist-forside" />
+          <p class="taw-tekst-desktop">
+            Tidløs rock med forkærlighed for analoge og akustiske instrumenter. The Awesome Welles har cementeret sig som et ledende must watch for fans af alternativ rock herhjemme.
+            <button class="desktop-forside-knap">Læs mere</button>
+          </p>
         </div>
       </section>
 
       <!-- asbjørn -->
       <section>
-        <img src="img/artister/asbjorn-mobil.png" alt="Billede af Asbjørn" class="asbjorn-mobil" />
+        <img src="img/artister/asbjorn-mobil.png" alt="Billede af Asbjørn" class="banner-mobil" />
+        <img src="img/artister/asbjorn-desktop.png" alt="Billede af Asbjørn" class="banner-tablet" />
         <p class="asbjorn-mobiltekst">Et eksplosivt popbrag med polyrytmer, melankoli og elektronisk legesyge.</p>
         <div class="knap-container">
           <button class="forside-knap">Læs mere</button>
         </div>
+        <!--desktop-->
+        <div class="asbjorn-desktop">
+          <img src="img/artister/asbjorn-desktop.png" alt="Billede af Asbjørn" class="artist-forside" />
+          <p class="asbjorn-tekst-desktop">
+            Et eksplosivt popbrag med polyrytmer, melankoli og elektronisk legesyge. Pop-rebellen vil udforske sårbarhed og styrke sammen med publikum.
+            <button class="desktop-forside-knap">Læs mere</button>
+          </p>
+        </div>
       </section>
 
-      <!-- frivillig sektion -->
+      <!---------------------- frivillig sektion ---------------------->
       <!-- banner -->
       <section>
-        <a href="bliv-frivillig.html"><img src="img/frivillig-banner-mobil.png" alt="Bliv frivillig på radar-banner" class="banner" /></a>
+        <a href="bliv-frivillig.html"><img src="img/frivillig-banner-mobil.png" alt="Bliv frivillig på radar-banner" class="banner-mobil" /></a>
+        <a href="bliv-frivillig.html"><img src="img/frivillig-banner-desktop.png" alt="Bliv en del af holdet banner" class="frivillig-banner" /></a>
       </section>
       <!-- selve frivillig sektionen -->
-      <section>
+      <section class="frivillig-sektion-mobil">
         <img src="img/emma-minna-mobil.png" alt="To frivillige bag baren" class="emma-minna-mobil" />
-        <p class="sektion-overskrift">Vil du være med til at skabe noget helt særligt?</p>
-        <p class="brodtekst-mobil">Bliv frivillig hos os og mærk, hvor fedt det er at gøre en forskel for lokalsamfundet og kulturscenen samtidig med, at du får uforglemmelige oplevelser.</p>
-        <p class="brodtekst-mobil">
-          Er du klar? <br />
-          Klik ind og læs mere – måske er det lige dig vi mangler!
-        </p>
-        <div class="knap-container">
-          <button class="forside-knap">Læs mere</button>
+        <img src="img/emma-minna-desktop.jpg" alt="To frivillige bag baren" class="emma-minna-desktop" />
+        <div>
+          <p class="sektion-overskrift">Vil du være med til at skabe noget helt særligt?</p>
+          <p class="brodtekst-mobil">Bliv frivillig hos os og mærk, hvor fedt det er at gøre en forskel for lokalsamfundet og kulturscenen samtidig med, at du får uforglemmelige oplevelser.</p>
+          <p class="brodtekst-mobil">
+            Er du klar? <br />
+            Klik ind og læs mere – måske er det lige dig vi mangler!
+          </p>
+          <div class="knap-container">
+            <button class="forside-knap">Læs mere</button>
+          </div>
         </div>
+      </section>
+
+      <!-- desktop-->
+      <section class="frivillig-sektion-desktop">
+        <img src="img/emma-minna-desktop.jpg" alt="To frivillige bag baren" class="emma-minna-desktop" />
+
+        <h1 id="frivillig-outline-overskrift">FRIVILLIG PÅ</h1>
+        <h2 id="rod-frivillig-overskrift">RADAR</h2>
+        <p class="brodtekst-desktop">
+          Vil du være en del af holdet, der får Radar til at køre rundt og skaber noget helt særligt? Her får du chancen for at opleve spændende udfordringer, udvikle dine evner og blive en vigtig del
+          af et stærkt fællesskab. Vi tilbyder ikke bare en hverdag fyldt med dynamik og engagement, men også unikke muligheder for at vokse både personligt og professionelt. Forestil dig at være en
+          del af et team, der værdsætter dine idéer, din indsats og din lyst til at gøre en forskel. Lyder det som noget for dig? Klik ind og læs mere – måske er det netop dig, vi mangler!
+          <button class="desktop-forside-knap">Læs mere</button>
+        </p>
       </section>
     </main>
 
-    <!---------------------- footer starter ---------------------->
+    <!------------------------------------------ footer ------------------------------------------>
     <footer class="footer-mobil">
       <!-- radar sektion -->
       <h1 class="footer-overskrift-mobil">RADAR</h1>
