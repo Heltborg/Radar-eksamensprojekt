@@ -152,7 +152,7 @@ nav {
 /* prettier-ignore */
 .velkomst-tablet, .desktop-forside-knap, .velkomst-desktop, .bissesvinet-desktop,
 .taw-desktop, .asbjorn-desktop, .banner-tablet, .frivillig-banner,
-.frivillig-sektion-desktop, .emma-minna-desktop {
+.frivillig-sektion-desktop, .emma-minna-desktop, .footer-desktop {
   display: none;
 }
 
@@ -333,7 +333,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 1rem; /* Afstand mellem elementerne */
+    gap: 1rem;
     align-items: center; /* Vertikal centrering */
     margin: 2rem 0;
   }
@@ -375,10 +375,10 @@ nav {
 
   /* -- lille logo styling -- */
   .lille-logo {
-    width: auto; /* Logoet tilpasses naturligt */
-    max-width: 3rem; /* Reducerer bredden af containeren */
+    width: auto;
+    max-width: 3rem; /* bredden af containeren */
     height: auto;
-    justify-self: start; /* Placeres mod venstre */
+    justify-self: start; /* placeres til venstre */
   }
 
   /* -- stort logo styling -- */
@@ -440,7 +440,7 @@ nav {
   /* ------------------------------------------------ forsiden ------------------------------------------------ */
   /* prettier-ignore */
   .velkomst-mobil,  .knap-container,  .bissesvinet-mobiltekst,  .taw-mobiltekst,
-  .asbjorn-mobiltekst,  .banner-tablet,  .frivillig-sektion-mobil {
+  .asbjorn-mobiltekst,  .banner-tablet,  .frivillig-sektion-mobil, .footer-mobil {
     display: none;
   }
 
@@ -450,15 +450,15 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
-    grid-auto-flow: column; /* Sørg for, at de bliver på samme række */
+    grid-auto-flow: column; /* de bliver på samme række */
     margin: 2rem;
   }
 
   .forside-tekst-desktop {
     grid-column: 1;
-    display: grid; /* Aktivér CSS Grid */
-    align-content: center; /* Centrerer indholdet vertikalt */
-    height: 100%; /* Sørger for, at sektionen fylder hele kolonnen */
+    display: grid;
+    align-content: center;
+    height: 100%;
   }
 
   /* prettier-ignore */
@@ -478,6 +478,7 @@ nav {
     height: auto;
   }
 
+  /* -- artister -- */
   .bissesvinet-desktop,
   .asbjorn-desktop {
     display: grid;
@@ -529,49 +530,151 @@ nav {
     padding-left: 2rem;
   }
 
+  /* -- frivillig sektion -- */
   .frivillig-sektion-desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1rem;
-    align-items: center;
+    grid-template-rows: auto auto; /* Rækker justeres efter indhold */
+    align-items: start;
   }
 
   .emma-minna-desktop {
-    grid-column: 1; /* Billedet forbliver i første kolonne */
-    grid-row: 1 / span 3; /* Strækker sig over tre rækker */
-    align-self: center; /* Vertikalt centreret */
-    width: 100%;
-    padding: 1rem;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: auto;
+    max-height: 90%;
+    align-self: center; /* vertikalt centreret */
+    justify-self: end;
+    margin: 3rem 0;
   }
 
   #frivillig-outline-overskrift {
     grid-column: 2;
     grid-row: 1;
-    justify-self: center;
-    font-size: 3rem;
-    color: #f3f3f3; /* samme farve som baggrund */
+    font-size: 4rem;
+    color: #f3f3f3; /* fjern fyldfarven */
     -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem; /* afstand til næste overskrift */
+    text-align: start;
+    align-self: end;
+    margin: 3rem 0 4rem -9rem; /* top, højre, bund, venstre */
     line-height: 1; /* linjeafstand */
   }
 
   #rod-frivillig-overskrift {
     grid-column: 2;
-    grid-row: 2;
-    justify-self: center;
-    font-size: 3rem;
+    grid-row: 1;
+    font-size: 4rem;
     color: #ce0404;
     -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
-    text-align: center;
+    text-align: start;
+    margin-left: 8.5rem;
+    align-self: end;
     line-height: 1; /* linjeafstand */
   }
 
   .brodtekst-desktop {
+    margin: 0 3rem;
+    justify-items: center; /* Centrerer elementer horisontalt */
+  }
+
+  .brodtekst-desktop p {
+    padding: 1rem;
     grid-column: 2; /* Forbliver i anden kolonne */
-    grid-row: 3; /* Placeres under overskrifterne */
+    grid-row: 2;
     text-align: left; /* Eventuel tekst kan være venstrestillet */
+  }
+
+  /* ------------------------------------------------ footer ------------------------------------------------ */
+  .footer-desktop {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    font-family: inter, sans-serif;
+    font-weight: 200;
+    color: white;
+    background-color: black;
+  }
+
+  .radar-footer-overskrift-desktop {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  .radar-footer-tekst-desktop {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 1rem;
+    padding: 0 0 2rem 1.5rem; /* -- top, højre, bund, venstre -- */
+    line-height: 1.6;
+  }
+
+  .kontakt-footer-overskrift-desktop {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  .kontakt-footer-tekst-desktop {
+    grid-column: 1;
+    grid-row: 4;
+    font-size: 1rem;
+    padding: 0 0 2rem 1.5rem; /* top, højre, bund, venstre */
+    line-height: 1.6;
+  }
+
+  .faq-footer-overskrift-desktop {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  .faq-footer-tekst-desktop {
+    grid-column: 2;
+    grid-row: 2 / 5; /* starter i række 2 og slutter i række 4 */
+    font-size: 1rem;
+    padding: 0 0 2rem 1.5rem; /* top, højre, bund, venstre */
+    line-height: 1.6;
+  }
+
+  .some-footer-overskrift-desktop {
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  .some-ikoner {
+    grid-column: 3;
+    grid-row: 2;
+    padding: 0 1.5rem 1.5rem 1.5rem; /* -- top, højre, bund, venstre -- */
+    max-width: 100%;
+  }
+
+  .nyhedsbrev-footer-overskrift-desktop {
+    grid-column: 3;
+    grid-row: 3;
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  /* -- tilmeld nyhedsbrev -- */
+  .nyhedsbrev {
+    grid-column: 3;
+    grid-row: 4;
+  }
+
+  .email-felt {
+    margin-left: 1.5rem;
+    padding: 0.75rem 5rem 0.75rem 0.75rem; /* -- top, højre, bund, venstre -- */
+    border: 2px solid #626262;
+    font-size: 1rem;
+    font-family: inter, sans-serif;
+    color: #ffffff;
+    max-width: 100%;
+    margin-bottom: 10%;
   }
 }
