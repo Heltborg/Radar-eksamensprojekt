@@ -198,6 +198,10 @@ body {
   margin: 2rem 3rem 0rem 3rem;
 }
 
+.velkomst-mobil {
+  display: grid;
+}
+
 #linje-et-velkomst-mobil {
   margin-bottom: 1rem;
 }
@@ -213,13 +217,15 @@ body {
 /* -- styling af knap -- */
 .knap-container {
   display: grid;
+  grid-column: 1/-1;
   justify-content: center;
   align-items: center;
   margin-bottom: 2.5rem;
 }
 
 .forside-knap,
-.desktop-forside-knap {
+.desktop-forside-knap,
+.medlem-knap-desktop {
   background-color: #ce0404;
   border: 1px solid #ce0404;
   color: white;
@@ -362,7 +368,7 @@ body {
 }
 
 /* prettier-ignore */
-.medlem-desktop-tekst, .det-hiphop-desktop {
+.medlem-desktop-tekst, .det-hiphop-desktop, .fordele-tekst-desktop, .afsluttende-tekst-medlem {
   display: none;
 }
 
@@ -471,12 +477,13 @@ body {
   }
 
   .forside-knap:hover,
-  .desktop-forside-knap:hover {
-    background-color: #9f0404;
-    color: white;
+  .desktop-forside-knap:hover, .medlem-knap-desktop:hover {
+    background-color: white;
+    color: #9f0404;
     border: 1px solid;
     border-color: #9f0404;
     transition: background-color 0.3s ease, color 0.3s ease; /* glidende overgang */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Skygge */
   }
 
   /* -- kommende events banner styling -- */
@@ -573,6 +580,7 @@ body {
   .fordele {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     align-items: center; /* centrerer indholdet vertikalt */
   }
 
@@ -615,6 +623,8 @@ body {
   }
 
   #slut-tekst-fordele {
+    display: grid;
+    grid-column: 1/-1;
     text-align: center;
     margin: 0 3rem 3rem 3rem;
   }
@@ -1002,7 +1012,7 @@ body {
 
   /* ------------------------------------------------ bliv medlem ------------------------------------------------ */
   /* prettier-ignore */
-  .medlem-tablet-tekst, .bliv-medlem-tekst {
+  .medlem-tablet-tekst, .bliv-medlem-tekst, .fordele-tekst, #slut-tekst-fordele {
     display: none;
   }
 
@@ -1028,7 +1038,7 @@ body {
   .medlem-desktop-tekst {
     display: grid;
     margin: 2rem;
-    line-height: 1.5; /* Gør teksten mere læsbar */
+    line-height: 1.5;
   }
 
   .radar-facade {
@@ -1043,9 +1053,44 @@ body {
   }
 
   #fordele-overskrift {
+    grid-column: 2;
+    grid-row: 1;
     font-size: 7rem;
     align-self: start;
     margin-top: 10rem;
     margin-left: -12rem;
+  }
+
+  .fordele-tekst-desktop {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 8rem;
+  }
+
+  .medlems-fordele {
+    margin: 0 2rem 0 4rem; /* top, højre, bund, venstre */
+    list-style-type: disc;
+    line-height: 1.5;
+  }
+
+  .afsluttende-tekst-medlem {
+    display: grid;
+    grid-column: 1/-1;
+    text-align: center;
+  }
+
+  .afsluttende-tekst-medlem p {
+    margin: 0 4rem;
+  }
+
+  #sidste-linje-medlem {
+    margin: 2rem 0;
+  }
+
+  .medlem-knap-desktop {
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
   }
 }
