@@ -8,10 +8,19 @@
 }
 
 /* prettier-ignore */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, 
-footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -22,10 +31,13 @@ footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, a
 
 /* HTML5 display-role reset for older browsers */
 /* prettier-ignore */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
+body {
+  line-height: 1;
+}
 /* prettier-ignore */
 ol, ul {
 	list-style: none;
@@ -57,10 +69,9 @@ body {
 
 /* ------------------------------------------------ navigationsbar ------------------------------------------------ */
 /* -- navigation -- */
-.navigationsbar {
+nav {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  position: relative;
   background-color: black;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -74,8 +85,10 @@ body {
 }
 
 /* -- Skjul menupunkter, søg/profil ikoner, stort logo og checkboxen -- */
-/* prettier-ignore */
-.menupunkter, .ikoner, .stort-logo, #burgermenu, .events-extra-items, .radar-extra-items, .faellesskab-extra-items {
+.menupunkter,
+.ikoner,
+.stort-logo,
+#burgermenu {
   display: none;
 }
 
@@ -89,73 +102,6 @@ body {
 .menu-ikon img {
   width: 120%;
   height: auto;
-}
-
-/* -- Submenu styling -- */
-.menu-items {
-  display: none;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  background-color: #ce3434;
-  padding: 1rem;
-  box-shadow: -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* skygge */
-  text-align: left;
-  z-index: 1;
-}
-
-.frivillig-dropdown-knap {
-  width: 50%;
-}
-
-/* -- når submenuen er åben -- */
-#burgermenu:checked + .menu-ikon + .menu-items {
-  display: block;
-}
-
-.menu-items ul {
-  list-style: none;
-}
-
-.menu-items li {
-  padding: 0.5rem 0;
-}
-
-.menu-items a {
-  color: white;
-  text-decoration: none;
-  font-family: inter, sans-serif;
-  font-size: 1.3rem;
-}
-
-/* -- Hover effekt på menupunkter -- */
-.menu-items a:hover {
-  text-decoration: underline white;
-}
-
-/* Juster skrifttype for alle ekstra punkter */
-.events-extra-items li a,
-.radar-extra-items li a,
-.faellesskab-extra-items li a {
-  font-size: 1rem; /* Mindre skrifttype */
-  margin-left: 2rem;
-}
-
-.menu-items ul > li:first-child:hover + .events-extra-items,
-.events-extra-items:hover {
-  display: block;
-}
-
-/* Vis radar-extra-items ved hover over OM RADAR */
-.menu-items ul > li:nth-child(3):hover + .radar-extra-items,
-.radar-extra-items:hover {
-  display: block;
-}
-
-/* Vis faellesskab-extra-items ved hover over FÆLLESSKAB */
-.menu-items ul > li:nth-child(5):hover + .faellesskab-extra-items,
-.faellesskab-extra-items:hover {
-  display: block;
 }
 
 /* ------------------------------------------------ forside ------------------------------------------------ */
@@ -315,123 +261,11 @@ body {
   margin-bottom: 10%;
 }
 
-/* ------------------------------------------------ bliv medlem ------------------------------------------------ */
-.breadcrumbs {
-  color: #777777;
-  font-family: alata, sans-serif;
-  font-size: 1rem;
-  padding-top: 2rem;
-  padding-left: 2rem;
-}
-
-.bliv-medlem-mobil {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-/* -- overskrift -- */
-#bliv-medlem-overskrift {
-  display: flex;
-  justify-content: start;
-  align-items: center; /* Justerer dem vertikalt på samme linje */
-  gap: 1rem; /* afstand mellem overskrifterne */
-  margin: 2.5rem 0 0 2rem; /* top, højre, bund, venstre */
-}
-
-/* -- styling af den enkelte overskrift -- */
-.outline-overskrift {
-  font-size: 3rem;
-  color: transparent; /* fjern fyldfarven */
-  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
-  text-align: start;
-  line-height: 1; /* linjeafstand */
-}
-
-.rod-overskrift {
-  font-size: 3rem;
-  color: #ce0404;
-  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
-  text-align: start;
-  line-height: 1; /* linjeafstand */
-}
-
-.medlem-tablet-tekst {
-  display: grid;
-  text-align: center;
-  margin: 2rem 2rem 0 2rem; /* top, højre, bund, venstre */
-}
-
-/* prettier-ignore */
-.medlem-desktop-tekst, .det-hiphop-desktop {
-  display: none;
-}
-
-.radar-facade {
-  display: grid;
-  width: 100%;
-  height: auto;
-  padding: 2rem;
-}
-
-.bliv-medlem-tekst {
-  display: grid;
-  margin: 0 2rem 2rem 2rem; /* top, højre, bund, venstre */
-}
-
-.fordele {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  align-items: center; /* centrerer indholdet vertikalt */
-}
-
-.det-hiphop {
-  grid-column: 1;
-  grid-row: 1;
-  justify-self: end; /* til højre i grid */
-  margin-right: 2rem;
-  max-width: 100%;
-  height: auto;
-}
-
-#fordele-overskrift {
-  display: grid;
-  grid-column: 1;
-  grid-row: 1;
-  font-size: 3rem;
-  color: #f3f3f3;
-  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
-  text-align: start;
-  align-self: end;
-  margin-left: 2rem;
-  line-height: 1; /* linjeafstand */
-}
-
-.fordele-tekst {
-  display: grid;
-  margin: 2rem 0 0 2rem; /* top, højre, bund, venstre */
-}
-
-#linje-et-fordele {
-  margin-bottom: 1rem;
-}
-
-.punkt-tekst {
-  margin: 0 2rem 1rem 3rem; /* top, højre, bund, venstre */
-  list-style-type: disc;
-  line-height: 1.5;
-}
-
-#slut-tekst-fordele {
-  text-align: center;
-  margin: 0 3rem 3rem 3rem;
-}
-
 /* ------------------------------------------------ Media query for små tablets ------------------------------------------------ */
 @media (min-width: 600px) {
   /* ------------------------------------------------ navigationsbar ------------------------------------------------ */
   /* -- styling af navigationsbar -- */
-  .navigationsbar {
+  nav {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-areas: "lille-logo stort-logo burgermenu";
@@ -450,7 +284,7 @@ body {
     justify-self: center;
     position: relative; /* logoet kan flyttes med margin */
     margin-bottom: -3rem; /* flyt logoet nedad med negativ margin */
-    z-index: 2; /* logo over navigationen og dropdown */
+    z-index: 1; /* logo over navigationen */
   }
 
   /* ------------------------------------------------ content ------------------------------------------------ */
@@ -489,7 +323,6 @@ body {
     display: none;
   }
 
-  /* -- frivillig styling -- */
   .banner-tablet,
   .frivillig-banner {
     display: block;
@@ -523,108 +356,14 @@ body {
     margin-bottom: 0;
   }
 
-  /* ------------------------------------------------ bliv medlem ------------------------------------------------ */
-  .det-hiphop {
-    display: none;
-  }
-
-  .breadcrumbs {
-    color: #777777;
-    font-family: alata, sans-serif;
-    font-size: 1rem;
-    padding-top: 2rem;
-    padding-left: 2rem;
-  }
-
-  .outline-overskrift {
-    grid-column: 1;
-    font-size: 3rem;
-    color: transparent; /* fjern fyldfarven */
-    -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
-    text-align: start;
-    line-height: 1; /* linjeafstand */
-  }
-
-  .rod-overskrift {
-    grid-column: 1;
-    font-size: 3rem;
-    color: #ce0404;
-    -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
-    text-align: start;
-    line-height: 1; /* linjeafstand */
-  }
-
-  .radar-facade {
-    display: grid;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-  }
-
-  .medlem-tablet-tekst {
-    display: grid;
-  }
-
-  .bliv-medlem-tekst {
-    display: grid;
-    margin: 0 2rem 2rem 2rem; /* top, højre, bund, venstre */
-  }
-
-  .fordele {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center; /* centrerer indholdet vertikalt */
-  }
-
-  .det-hiphop-desktop {
-    display: grid;
-    grid-column: 1;
-    margin: 2rem;
-    max-width: 100%;
-    height: auto;
-  }
-
-  #fordele-overskrift {
-    display: grid;
-    grid-column: 2;
-    font-size: 3rem;
-    color: #f3f3f3;
-    -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
-    text-align: start;
-    align-self: start;
-    margin-top: 7rem;
-    margin-left: -2rem;
-    line-height: 1; /* linjeafstand */
-  }
-
-  .fordele-tekst {
-    display: grid;
-    grid-column: 2;
-    grid-row: 1;
-    margin: 10rem 0 0 4rem; /* top, højre, bund, venstre */
-  }
-
-  #linje-et-fordele {
-    margin-bottom: 1rem;
-  }
-
-  .punkt-tekst {
-    margin: 0 2rem 1rem 3rem; /* top, højre, bund, venstre */
-    list-style-type: disc;
-    line-height: 1.5;
-  }
-
-  #slut-tekst-fordele {
-    text-align: center;
-    margin: 0 3rem 3rem 3rem;
-  }
+  /* -- frivillig styling -- */
 }
 
 /* ------------------------------------------------ Media query for desktops ------------------------------------------------ */
 @media (min-width: 900px) {
   /* ------------------------------------------------ navigationsbar ------------------------------------------------ */
   /* -- styling af navigationsbar -- */
-  .navigationsbar {
+  nav {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-areas: "lille-logo stort-logo menupunkter ikoner";
@@ -663,7 +402,6 @@ body {
   .menupunkter {
     grid-area: "menupunkter";
     display: flex;
-    position: relative;
     justify-content: flex-end;
     gap: 3rem;
     color: white;
@@ -685,61 +423,6 @@ body {
     text-decoration: underline red;
   }
 
-  /* prettier ignore */
-  .events-dropdown-menu,
-  .radar-dropdown-menu,
-  .faellesskab-dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 50vw;
-    background-color: #ce3434;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 5; /* sikker på den altid er forrest */
-    list-style: none;
-    padding: 1rem 0;
-    text-align: left;
-  }
-
-  .frivillig-dropdown-knap {
-    width: 40%;
-  }
-
-  /* prettier-ignore */
-  .events-dropdown-menu li, .radar-dropdown-menu li, .faellesskab-dropdown-menu li {
-    padding: 0.5rem 2rem;
-  }
-
-  /* prettier-ignore */
-  .events-dropdown-menu li a, .radar-dropdown-menu li a, .faellesskab-dropdown-menu li a {
-    text-decoration: none;
-    color: white;
-    font-family: alata, sans-serif;
-    font-size: 1.3rem;
-  }
-
-  /* prettier-ignore */
-  .events-dropdown-menu li a:hover, .radar-dropdown-menu li a:hover, .faellesskab-dropdown-menu li a:hover {
-    text-decoration: underline white;
-  }
-
-  /* Viser dropdown-menuen ved hover */
-  /* prettier-ignore */
-  .menupunkter a:hover + .events-dropdown-menu, .events-dropdown-menu:hover {
-    display: block;
-  }
-
-  /* prettier-ignore */
-  .menupunkter a:hover + .radar-dropdown-menu, .radar-dropdown-menu:hover {
-    display: block;
-  }
-
-  /* prettier-ignore */
-  .menupunkter a:hover + .faellesskab-dropdown-menu, .faellesskab-dropdown-menu:hover {
-    display: block;
-  }
-
   /* -- søg og profil ikon styling enkeltvis -- */
   .ikon {
     width: 2rem;
@@ -752,11 +435,6 @@ body {
     display: flex;
     justify-content: flex-end;
     gap: 3rem;
-  }
-
-  /* -- understreget når man er inde på menupunktet -- */
-  #faellesskab {
-    text-decoration: underline red;
   }
 
   /* ------------------------------------------------ forsiden ------------------------------------------------ */
@@ -998,54 +676,5 @@ body {
     color: #ffffff;
     max-width: 100%;
     margin-bottom: 10%;
-  }
-
-  /* ------------------------------------------------ bliv medlem ------------------------------------------------ */
-  /* prettier-ignore */
-  .medlem-tablet-tekst, .bliv-medlem-tekst {
-    display: none;
-  }
-
-  #bliv-medlem-overskrift {
-    grid-column: 1/-1;
-  }
-
-  #bliv-medlem-overskrift .outline-overskrift,
-  .rod-overskrift {
-    font-size: 6rem;
-  }
-
-  .bliv-medlem-mobil {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .medlemstekst-div {
-    align-self: center;
-    margin-left: 4rem;
-  }
-
-  .medlem-desktop-tekst {
-    display: grid;
-    margin: 2rem;
-    line-height: 1.5; /* Gør teksten mere læsbar */
-  }
-
-  .radar-facade {
-    display: grid;
-    max-width: 100%;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .det-hiphop-desktop {
-    justify-self: center;
-  }
-
-  #fordele-overskrift {
-    font-size: 7rem;
-    align-self: start;
-    margin-top: 10rem;
-    margin-left: -12rem;
   }
 }
