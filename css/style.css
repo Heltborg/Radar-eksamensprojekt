@@ -137,7 +137,7 @@ body {
 .events-extra-items li a,
 .radar-extra-items li a,
 .faellesskab-extra-items li a {
-  font-size: 1rem;
+  font-size: 1rem; /* Mindre skrifttype */
   margin-left: 2rem;
 }
 
@@ -174,20 +174,20 @@ body {
 /* -- overskrift -- */
 #velkomst-outline-overskrift {
   font-size: 3rem;
-  color: transparent;
-  -webkit-text-stroke: 2px #ce0404;
+  color: transparent; /* fjern fyldfarven */
+  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
   text-align: center;
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  line-height: 1;
+  margin-bottom: 0.5rem; /* afstand til næste overskrift */
+  line-height: 1; /* linjeafstand */
 }
 
 #rod-velkomst-overskrift {
   font-size: 3rem;
   color: #ce0404;
-  -webkit-text-stroke: 2px #ce0404;
+  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
   text-align: center;
-  line-height: 1;
+  line-height: 1; /* linjeafstand */
 }
 
 /* -- velkomst tekst mobil -- */
@@ -223,8 +223,9 @@ body {
   margin-bottom: 2.5rem;
 }
 
-/* prettier-ignore */
-.forside-knap, .desktop-forside-knap, .medlem-knap-desktop, .historie-knap, .stot-knap, .kalender-knap {
+.forside-knap,
+.desktop-forside-knap,
+.medlem-knap-desktop {
   background-color: #ce0404;
   border: 1px solid #ce0404;
   color: white;
@@ -239,8 +240,8 @@ body {
 /* -- event banner -- */
 .kommende-events-banner {
   font-size: 2.5rem;
-  color: transparent;
-  -webkit-text-stroke: 2px white;
+  color: transparent; /* fjern fyldfarven */
+  -webkit-text-stroke: 2px white; /* 2px hvidt omrids */
   background-color: black;
   text-align: center;
   padding: 2rem 0;
@@ -338,26 +339,26 @@ body {
 #bliv-medlem-overskrift {
   display: flex;
   justify-content: start;
-  align-items: center;
-  gap: 1rem;
+  align-items: center; /* Justerer dem vertikalt på samme linje */
+  gap: 1rem; /* afstand mellem overskrifterne */
   margin: 2.5rem 0 0 2rem; /* top, højre, bund, venstre */
 }
 
 /* -- styling af den enkelte overskrift -- */
 .outline-overskrift {
   font-size: 3rem;
-  color: transparent;
-  -webkit-text-stroke: 2px #ce0404;
+  color: transparent; /* fjern fyldfarven */
+  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
   text-align: start;
-  line-height: 1;
+  line-height: 1; /* linjeafstand */
 }
 
 .rod-overskrift {
   font-size: 3rem;
   color: #ce0404;
-  -webkit-text-stroke: 2px #ce0404;
+  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
   text-align: start;
-  line-height: 1;
+  line-height: 1; /* linjeafstand */
 }
 
 .medlem-tablet-tekst {
@@ -405,11 +406,11 @@ body {
   grid-row: 1;
   font-size: 3rem;
   color: #f3f3f3;
-  -webkit-text-stroke: 2px #ce0404;
+  -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
   text-align: start;
   align-self: end;
   margin-left: 2rem;
-  line-height: 1;
+  line-height: 1; /* linjeafstand */
 }
 
 .fordele-tekst {
@@ -432,232 +433,6 @@ body {
   margin: 0 3rem 3rem 3rem;
 }
 
-/* ------------------------------------------------ om os ------------------------------------------------ */
-/* prettier-ignore */
-.desktopvideo, .radar-i-tal-desktop, .foto-bar-desktop, .historien-bag-desktop-img, .historien-bag-sektion-desktop, .stot-musikken-desktop, .om-os-desktop,  
-.stot-musikken-sektion-desktop {
-  display: none;
-}
-
-.mobilvideo {
-  display: grid;
-  max-width: 100%;
-}
-
-/* -- om os sektion -- */
-.om-os-mobil {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-/* -- overskrift -- */
-#om-os-overskrift {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 1rem;
-  margin: 2.5rem 0 0 2rem; /* top, højre, bund, venstre */
-}
-
-.medlem-tablet-tekst {
-  display: grid;
-  text-align: center;
-  margin: 2rem 2rem 0 2rem; /* top, højre, bund, venstre */
-}
-
-.om-os-intro-tekst {
-  display: grid;
-  text-align: center;
-  font-size: 1.4rem;
-  line-height: 1.2;
-  margin: 2rem 2rem 0 2rem; /* top, højre, bund, venstre */
-}
-
-.om-os-mobil-tekst {
-  display: grid;
-  text-align: start;
-  margin: 2rem 2rem 0 2rem; /* top, højre, bund, venstre */
-}
-
-.om-os-radar {
-  display: grid;
-  max-width: 50%;
-  justify-self: end;
-  margin: 2rem 2rem 0 0; /* top, højre, bund, venstre */
-  z-index: 1;
-}
-
-.om-os-godsbanen {
-  display: grid;
-  max-width: 50%;
-  margin: -3rem 0 2rem 2rem; /* top, højre, bund, venstre */
-}
-
-.bliv-medlem-tekst {
-  display: grid;
-  margin: 0 2rem 2rem 2rem; /* top, højre, bund, venstre */
-}
-
-/* -- radar i tal -- */
-.radar-i-tal-mobil {
-  display: grid;
-  width: 100%;
-  margin: 2rem 0;
-}
-
-/* -- historien bag radar sektion -- */
-.historen-bag-sektion-mobil {
-  display: grid;
-  position: relative;
-}
-
-/* -- overskrift -- */
-.historien-bag-radar-overskrift {
-  display: grid;
-  grid-template-columns: 1fr;
-  z-index: 1;
-}
-
-#historien-bag-rod-overskrift {
-  grid-column: 1;
-  font-size: 3rem;
-  color: #ce0404;
-  -webkit-text-stroke: 2px #ce0404;
-  text-align: center;
-  line-height: 1;
-}
-
-#radar-outline-overskrift {
-  grid-column: 1;
-  font-size: 3rem;
-  color: #f3f3f3;
-  -webkit-text-stroke: 2px #ce0404;
-  text-align: center;
-  margin-left: 12rem;
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.historien-bag-mobil-img {
-  justify-self: center;
-  width: 90%;
-  margin-top: -1.5rem;
-  margin-bottom: 2rem;
-}
-
-.historie-mobil-tekst p {
-  grid-column: 1fr;
-  margin: 0 2rem 1rem 2rem;
-}
-
-/* -- foto bar -- */
-.foto-bar-mobil {
-  display: grid;
-  overflow-x: auto; /* horisontal scrolling */
-}
-
-.foto-bar-mobil img {
-  height: 40vh; /* 40% af viewportens højde */
-  margin-bottom: 3rem;
-}
-
-/* -- støt musikken og få fordele sektion -- */
-.stot-musikken-sektion {
-  display: grid;
-}
-
-.stot-musikken-overskrift {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 1rem;
-}
-
-/* -- overskrift -- */
-#stot-musikken-outline-overskrift {
-  grid-column: 1 /-1;
-  font-size: 2rem;
-  color: transparent;
-  -webkit-text-stroke: 2px #ce0404;
-  text-align: start;
-  margin-left: 3rem;
-  line-height: 1;
-}
-
-#og-fa-outline-overskrift {
-  grid-column: 1;
-  font-size: 2rem;
-  color: #f3f3f3;
-  -webkit-text-stroke: 2px #ce0404;
-  text-align: end;
-  line-height: 1;
-  margin-left: 9rem;
-  z-index: 1;
-}
-
-#fordele-rod-overskrift {
-  grid-column: 2;
-  font-size: 2rem;
-  color: #ce0404;
-  -webkit-text-stroke: 2px #ce0404;
-  text-align: start;
-  line-height: 1;
-  z-index: 1;
-}
-
-.stot-musikken-mobil {
-  display: grid;
-  width: 70%;
-  justify-self: center;
-  margin-top: -0.5rem;
-}
-
-.stot-musikken-tekst p {
-  margin: 2rem;
-}
-
-/* ------------------------------------------------ kalender ------------------------------------------------ */
-
-/* prettier-ignore */
-.januar-sektion-tablet, .januar-sektion-desktop, .februar-sektion-tablet, .februar-sektion-desktop, .streg-desktop {
-  display: none;
-}
-/* -- overskrift -- */
-.kalender-overskrift {
-  text-align: left;
-  font-size: 3rem;
-  margin: 2rem 0 1rem 2rem;
-}
-
-/* prettier-ignore */
-.januar-sektion-mobil, .februar-sektion-mobil {
-  display: grid;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-/* -- billeder -- */
-.kalender-billede-mobil {
-  margin-top: 3rem;
-}
-
-.lille-kalender-tekst {
-  font-size: 0.8rem;
-}
-
-/* -- streg der adskiller månederne -- */
-.horisontal-streg {
-  border: none;
-  height: 1px; /* tykkelse */
-  background-color: black;
-  margin: 2rem 0;
-  width: 100%;
-}
-
-/* -- knap -- */
-.kalender-knap {
-  margin-bottom: 3rem;
-}
-
 /* ------------------------------------------------ Media query for små tablets ------------------------------------------------ */
 @media (min-width: 600px) {
   /* ------------------------------------------------ navigationsbar ------------------------------------------------ */
@@ -670,10 +445,6 @@ body {
     align-items: center;
     gap: 2rem;
     padding: 0.3rem 1rem;
-  }
-
-  .frivillig-dropdown-knap {
-    width: 35%;
   }
 
   /* -- stort logo styling -- */
@@ -705,8 +476,8 @@ body {
     padding-bottom: 1rem;
   }
 
-  /* prettier-ignore */
-  .forside-knap:hover, .desktop-forside-knap:hover, .medlem-knap-desktop:hover, .historie-knap:hover, .stot-knap:hover, .kalender-knap:hover {
+  .forside-knap:hover,
+  .desktop-forside-knap:hover, .medlem-knap-desktop:hover {
     background-color: white;
     color: #9f0404;
     border: 1px solid;
@@ -775,19 +546,19 @@ body {
   .outline-overskrift {
     grid-column: 1;
     font-size: 3rem;
-    color: transparent;
-    -webkit-text-stroke: 2px #ce0404;
+    color: transparent; /* fjern fyldfarven */
+    -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
     text-align: start;
-    line-height: 1;
+    line-height: 1; /* linjeafstand */
   }
 
   .rod-overskrift {
     grid-column: 1;
     font-size: 3rem;
     color: #ce0404;
-    -webkit-text-stroke: 2px #ce0404;
+    -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
     text-align: start;
-    line-height: 1;
+    line-height: 1; /* linjeafstand */
   }
 
   .radar-facade {
@@ -857,109 +628,6 @@ body {
     text-align: center;
     margin: 0 3rem 3rem 3rem;
   }
-
-  /* ------------------------------------------------ om os ------------------------------------------------ */
-  /* prettier-ignore */
-  .radar-i-tal-mobil, .foto-bar-mobil, .historien-bag-mobil-img, .stot-musikken-mobil {
-    display: none;
-  }
-
-  #radar-outline-overskrift {
-    z-index: 2;
-  }
-
-  .historien-bag-desktop-img {
-    display: grid;
-    justify-self: center;
-    width: 90%;
-    margin-top: -1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  /* -- radar i tal banner -- */
-  .radar-i-tal-desktop {
-    display: grid;
-    width: 100%;
-    margin: 3rem 0;
-  }
-
-  /* -- foto bar -- */
-  .foto-bar-desktop {
-    display: grid;
-    overflow-x: auto; /* horisontal scrolling */
-  }
-
-  .foto-bar-desktop img {
-    height: 60vh; /* 40% af viewportens højde */
-    margin-bottom: 3rem;
-  }
-
-  /* -- støt musikken sektion -- */
-  /* prettier-ignore */
-  #stot-musikken-outline-overskrift, #og-fa-outline-overskrift, #fordele-rod-overskrift {
-    font-size: 3rem;
-    -webkit-text-stroke: 2px #ce0404;
-  }
-
-  #stot-musikken-outline-overskrift {
-    margin-left: 5rem;
-  }
-
-  .stot-musikken-desktop {
-    display: grid;
-    width: 80%;
-    justify-self: center;
-    margin-top: -0.5rem;
-  }
-
-  /* ------------------------------------------------ kalender ------------------------------------------------ */
-  .januar-sektion-mobil,
-  .februar-sektion-mobil {
-    display: none;
-  }
-
-  .januar-sektion-tablet,
-  .februar-sektion-tablet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-  }
-
-  .kalender-billede-tablet {
-    margin-top: 3rem;
-    display: block;
-    height: auto;
-    transition: filter 0.3s ease; /* glidende overgang ved sløring */
-  }
-
-  .kalender-billede-container {
-    position: relative;
-    display: inline-block; /* Tilpas til billedets størrelse */
-  }
-
-  .kalender-billede-container:hover .kalender-billede-tablet {
-    filter: blur(4px); /* slører billedet ved hover */
-  }
-
-  .laes-mere-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(206, 4, 4, 0.9); /* semi-transparent rød baggrund */
-    color: white;
-    font-family: "Inter", sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    opacity: 0; /* usynlig teksten til at starte med */
-    transition: opacity 0.3s ease; /* glidende overgang for visning */
-  }
-
-  .kalender-billede-container:hover .laes-mere-overlay {
-    opacity: 1; /* Viser teksten ved hover */
-  }
 }
 
 /* ------------------------------------------------ Media query for desktops ------------------------------------------------ */
@@ -1027,9 +695,10 @@ body {
     text-decoration: underline red;
   }
 
-  /* -- dropdown menu styling -- */
-  /* prettier-ignore */
-  .events-dropdown-menu, .radar-dropdown-menu, .faellesskab-dropdown-menu {
+  /* prettier ignore */
+  .events-dropdown-menu,
+  .radar-dropdown-menu,
+  .faellesskab-dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
@@ -1065,7 +734,7 @@ body {
     text-decoration: underline white;
   }
 
-  /* -- Viser dropdown-menuen ved hover -- */
+  /* Viser dropdown-menuen ved hover */
   /* prettier-ignore */
   .menupunkter a:hover + .events-dropdown-menu, .events-dropdown-menu:hover {
     display: block;
@@ -1096,8 +765,7 @@ body {
   }
 
   /* -- understreget når man er inde på menupunktet -- */
-  /* prettier-ignore */
-  #faellesskab, #omos {
+  #faellesskab {
     text-decoration: underline red;
   }
 
@@ -1424,232 +1092,5 @@ body {
     max-width: fit-content;
     margin: 0 auto;
     margin-bottom: 2.5rem;
-  }
-
-  /* ------------------------------------------------ om os ------------------------------------------------ */
-  /* prettier-ignore */
-  .mobilvideo, .om-os-mobil, .historen-bag-sektion-mobil, .stot-musikken-sektion {
-    display: none;
-  }
-
-  /* -- video -- */
-  .desktopvideo {
-    display: grid;
-    max-width: 100%;
-  }
-
-  /* -- overskrift -- */
-  #om-os-overskrift .outline-overskrift {
-    font-size: 6rem;
-  }
-
-  .om-os-desktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    align-items: center;
-  }
-
-  /* -- tekst -- */
-  .om-os-desktop-tekst {
-    grid-column: 1;
-    margin: 0 -6rem 0 7rem; /* top, højre, bund, venstre */
-  }
-
-  .om-os-forste-tekst-desktop {
-    font-size: 1.4rem;
-  }
-
-  .om-os-anden-tekst-desktop {
-    margin-top: 2rem;
-  }
-
-  /* -- radar billedet -- */
-  .om-os-radar-desktop {
-    grid-column: 2;
-    width: 60%;
-    padding-left: 3rem;
-    justify-self: center;
-  }
-
-  /* -- godsbanen billede -- */
-  .om-os-godsbanen-desktop {
-    grid-column: 1;
-    width: 60%;
-    justify-self: center;
-    padding-right: 2rem;
-  }
-
-  /* -- tekst ved godsbanen billedet -- */
-  .godsbanen-tekst-desktop {
-    grid-column: 2;
-  }
-
-  .om-os-tredje-tekst-desktop {
-    margin: 0 2rem 0 -6rem; /* top, højre, bund, venstre */
-  }
-
-  /* prettier-ignore */
-  .om-os-fjerde-tekst-desktop, .om-os-femte-tekst-desktop{
-    margin: 2rem 2rem 0 -6rem; /* top, højre, bund, venstre */
-  }
-
-  /* -- historien bag styling -- */
-  .historien-bag-sektion-desktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .historien-bag-overskrifter-desktop {
-    grid-column: 1/-1;
-    padding-top: 3rem;
-    position: relative;
-  }
-
-  /* -- ovverskrift historien bag -- */
-  #radar-outline-overskrift {
-    font-size: 4.5rem;
-    margin-right: 12rem;
-    z-index: 1;
-  }
-
-  /* -- overskrift radar -- */
-  #historien-bag-rod-overskrift {
-    font-size: 4.5rem;
-    justify-self: center;
-    margin-left: 31.5rem;
-  }
-
-  .historien-bag-desktop-img {
-    grid-column: 1;
-    margin-top: -7rem;
-    margin-left: 5rem;
-  }
-
-  /* -- historien bag tekst -- */
-  .historen-bag-desktop-tekst p {
-    margin: 2rem 4rem;
-  }
-
-  /* -- knap -- */
-  .historie-knap {
-    grid-column: 1 / -1;
-    justify-self: center;
-    margin: 1rem auto;
-  }
-
-  /* -- fotobar -- */
-  .foto-bar-desktop img {
-    margin: 2rem 0;
-    width: 100vw;
-    height: auto;
-  }
-
-  /* -- støt musikken og få fordele -- */
-  .stot-musikken-sektion-desktop {
-    display: grid;
-  }
-
-  /* -- overskrift -- */
-  #stot-musikken-outline-overskrift {
-    font-size: 5rem;
-    margin-left: 3rem;
-  }
-
-  #og-fa-outline-overskrift {
-    font-size: 5rem;
-    margin-right: -6rem;
-  }
-
-  #fordele-rod-overskrift {
-    font-size: 5rem;
-    margin-left: 6rem;
-  }
-
-  /* -- container for hele støt sektionen -- */
-  .stot-sektion-desktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    margin-bottom: 4rem;
-  }
-  /* -- container for tekst og knap -- */
-  .stot-tekst-desktop {
-    display: grid;
-    grid-column: 1;
-    align-items: center;
-    margin: 2rem 0 0 3.5rem;
-    gap: 2rem;
-  }
-
-  /* -- knap -- */
-  .stot-knap {
-    justify-self: center; /* Centrerer knappen horisontalt */
-  }
-
-  /* -- billede -- */
-  .stot-musikken-desktop {
-    grid-column: 2;
-    width: 70%;
-    margin: 2rem 0;
-  }
-
-  /* ------------------------------------------------ kalender ------------------------------------------------ */
-
-  /* prettier-ignore */
-  .januar-sektion-mobil, .januar-sektion-tablet, .februar-sektion-mobil, .februar-sektion-tablet {
-    display: none;
-  }
-
-  .kalender-overskrift {
-    font-size: 4rem;
-    margin-bottom: 3rem;
-  }
-
-  /* -- måneder -- */
-  /* prettier-ignore */
-  .januar-sektion-desktop, .februar-sektion-desktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  /* -- artist billederne -- */
-  .kalender-billede-desktop {
-    width: 75%;
-  }
-
-  /* -- tekst under billederne -- */
-  .artist-kalender-tekst {
-    font-size: 1rem;
-  }
-
-  .dato-kalender-tekst {
-    font-size: 0.8rem;
-  }
-
-  .genre-kalender-tekst {
-    font-size: 0.6rem;
-    margin-top: 0.3rem;
-    margin-bottom: 4rem;
-  }
-
-  /* prettier-ignore */
-  .kalender-billede-desktop, .artist-kalender-tekst, .dato-kalender-tekst, .genre-kalender-tekst {
-    padding-left: 2rem;
-  }
-
-  .kalender-billede-desktop {
-    display: block;
-    transition: filter 0.3s ease; /* Glidende overgang ved sløring */
-  }
-
-  .streg-desktop {
-    display: grid;
-  }
-
-  .horisontal-streg {
-    margin: 0 0 2rem 0;
   }
 }
