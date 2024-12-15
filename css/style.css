@@ -208,9 +208,7 @@ a {
 
 /* -- skjul tablet og desktop indhold -- */
 /* prettier-ignore */
-.velkomst-tablet, .desktop-forside-knap, .velkomst-desktop, .bissesvinet-desktop,
-.taw-desktop, .asbjorn-desktop, .banner-tablet, .frivillig-banner,
-.frivillig-sektion-desktop, .emma-minna-desktop, .footer-desktop {
+.velkomst-tablet, .desktop-forside-knap, .velkomst-desktop, .bissesvinet-desktop, .taw-desktop, .asbjorn-desktop, .banner-tablet, .frivillig-banner, .frivillig-sektion-desktop, .emma-minna-desktop, .footer-desktop, .galleri-knap {
   display: none;
 }
 
@@ -224,7 +222,7 @@ a {
 }
 
 /* prettier-ignore */
-.forside-knap, .desktop-forside-knap, .medlem-knap-desktop, .historie-knap, .stot-knap, .kalender-knap {
+.forside-knap, .desktop-forside-knap, .medlem-knap-desktop, .historie-knap, .stot-knap, .kalender-knap, .galleri-knap {
   background-color: #ce0404;
   border: 1px solid #ce0404;
   color: white;
@@ -630,7 +628,7 @@ a {
 }
 
 /* prettier-ignore */
-.januar-sektion-mobil, .februar-sektion-mobil {
+.januar-sektion-mobil, .februar-sektion-mobil, .galleri-sektion-mobil {
   display: grid;
   justify-content: center;
   margin-bottom: 3rem;
@@ -660,6 +658,11 @@ a {
 }
 
 /* ------------------------------------------------ kalender ------------------------------------------------ */
+/* prettier-ignore */
+.galleri-sektion-tablet, .galleri-sektion-desktop, .galleri-intro-desktop {
+  display: none;
+}
+
 /* -- overskrift -- */
 .galleri-overskrift {
   display: flex;
@@ -669,9 +672,22 @@ a {
   margin: 2.5rem 0 0 2rem; /* top, højre, bund, venstre */
 }
 
-.galleri-intro{
+.galleri-overskrift .outline-overskrift {
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+
+/* -- tekst -- */
+.galleri-intro {
   display: grid;
-  margin: 2rem;
+  margin: 2rem 3rem;
+}
+
+/* -- styling af billeder -- */
+.galleri-mobil {
+  margin-top: 3rem;
+  width: 90%;
+  justify-self: center;
 }
 
 /* ------------------------------------------------ Media query for små tablets ------------------------------------------------ */
@@ -722,7 +738,7 @@ a {
   }
 
   /* prettier-ignore */
-  .forside-knap:hover, .desktop-forside-knap:hover, .medlem-knap-desktop:hover, .historie-knap:hover, .stot-knap:hover, .kalender-knap:hover {
+  .forside-knap:hover, .desktop-forside-knap:hover, .medlem-knap-desktop:hover, .historie-knap:hover, .stot-knap:hover, .kalender-knap:hover, .galleri-knap:hover {
     background-color: white;
     color: #9f0404;
     border: 1px solid;
@@ -790,7 +806,7 @@ a {
 
   .outline-overskrift {
     grid-column: 1;
-    font-size: 3rem;
+    font-size: 4rem;
     color: transparent;
     -webkit-text-stroke: 2px #ce0404;
     text-align: start;
@@ -799,7 +815,7 @@ a {
 
   .rod-overskrift {
     grid-column: 1;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #ce0404;
     -webkit-text-stroke: 2px #ce0404;
     text-align: start;
@@ -808,7 +824,8 @@ a {
 
   .radar-facade {
     display: grid;
-    width: 100%;
+    width: 70%;
+    justify-self: center;
     height: auto;
     padding: 2rem;
   }
@@ -840,7 +857,7 @@ a {
   #fordele-overskrift {
     display: grid;
     grid-column: 2;
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #f3f3f3;
     -webkit-text-stroke: 2px #ce0404; /* 2px rødt omrids */
     text-align: start;
@@ -975,6 +992,36 @@ a {
 
   .kalender-billede-container:hover .laes-mere-overlay {
     opacity: 1; /* Viser teksten ved hover */
+  }
+
+  /* ------------------------------------------------ galleri ------------------------------------------------ */
+  /* prettier-ignore */
+  .galleri-sektion-mobil, .galleri-sektion-desktop, .galleri-intro {
+    display: none;
+  }
+
+  .galleri-overskrift .outline-overskrift {
+    font-size: 4rem;
+    margin-left: 1rem;
+  }
+
+  .galleri-intro-desktop {
+    display: grid;
+    margin: 2rem 3rem 2rem 3rem;
+  }
+
+  .galleri-sektion-tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin: 3rem;
+    gap: 4rem;
+    row-gap: 4rem;
+  }
+
+  .galleri-tablet {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -1661,15 +1708,55 @@ a {
     padding-left: 2rem;
   }
 
-  .kalender-billede-desktop {
-    display: block;
-  }
-
   .streg-desktop {
     display: grid;
   }
 
   .horisontal-streg {
     margin: 0 0 2rem 0;
+  }
+
+  /* ------------------------------------------------ galleri ------------------------------------------------ */
+  /* prettier-ignore */
+  .galleri-sektion-mobil, .galleri-sektion-tablet {
+    display: none;
+  }
+
+  .galleri-overskrift .outline-overskrift {
+    font-size: 5rem;
+    margin-left: 2.8rem;
+  }
+
+  .galleri-intro-desktop {
+    margin: 2rem 3rem 4rem 5rem;
+  }
+
+  .galleri-sektion-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 6rem;
+    margin-left: 2rem;
+  }
+
+  .galleri-desktop {
+    width: 80%;
+    padding-left: 3rem;
+  }
+
+  /* -- tekst under billederne -- */
+  .artist-tekst {
+    font-size: 1rem;
+    margin-left: 3rem;
+  }
+
+  .dato-tekst {
+    font-size: 0.8rem;
+    margin-left: 3rem;
+  }
+
+  .galleri-knap {
+    display: grid;
+    max-width: fit-content;
+    margin: 3rem auto;
   }
 }
