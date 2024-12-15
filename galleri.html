@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GALLERI | RADAR LIVE</title>
+    <link rel="icon" type="image/png" href="img/sort-lille-logo.png" />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Connected til google fonts og icons-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <!------------------------------------------ body starter ------------------------------------------>
+  <body>
+    <!------------------------------------------ header starter ------------------------------------------>
+    <header>
+      <nav class="navigationsbar">
+        <!-- logoer -->
+        <div>
+          <a href="index.html"><img src="img/hvidt-lille-logo.png" alt="RADAR logo" class="lille-logo" /></a>
+        </div>
+        <div>
+          <a href="index.html"><img src="img/stort-logo.png" alt="RADAR LIVE" class="stort-logo" /></a>
+        </div>
+
+        <!-- burgermenuen -->
+        <input type="checkbox" id="burgermenu" />
+        <label for="burgermenu" class="menu-ikon">
+          <img src="img/burgermenu.png" alt="Burgermenu" />
+        </label>
+
+        <!-- dropdown -->
+        <div class="menu-items">
+          <ul>
+            <li><a href="#">EVENTS</a></li>
+            <ul class="events-extra-items">
+              <li><a href="kalender.html">KALENDER</a></li>
+              <li><a href="#">TIDLIGERE EVENTS</a></li>
+              <li><a href="#">BOOK RADAR</a></li>
+            </ul>
+            <li><a href="#">OM RADAR</a></li>
+            <ul class="radar-extra-items">
+              <li><a href="om-os.html">OM OS</a></li>
+              <li><a href="#">STØT OS</a></li>
+              <li><a href="#">VORES TEAM</a></li>
+              <li><a href="#">NYHEDER</a></li>
+              <li><a href="#">LOKALE SAMARBEJDER</a></li>
+            </ul>
+            <li><a href="#">FÆLLESSKAB</a></li>
+            <ul class="faellesskab-extra-items">
+              <li><a href="#">BLIV FRIVILLIG</a></li>
+              <li><a href="bliv-medlem.html">BLIV MEDLEM</a></li>
+              <li><a href="#">RADAR-BLOG</a></li>
+              <li><a href="#">GALLERI</a></li>
+              <li><a href="#">MERCHANDISE</a></li>
+            </ul>
+            <li><a href="#">MIN PROFIL</a></li>
+            <li><a href="#">SØG</a></li>
+            <li>
+              <a href="#"><img src="img/frivillig-knap.png" alt="Bliv frivillig knap" class="frivillig-dropdown-knap" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- menupunkter desktop -->
+        <div class="menupunkter">
+          <a href="#">Events</a>
+          <ul class="events-dropdown-menu">
+            <li><a href="kalender.html">KALENDER</a></li>
+            <li><a href="#">TIDLIGERE EVENTS</a></li>
+            <li><a href="#">BOOK RADAR</a></li>
+            <li>
+              <a href="#"><img src="img/frivillig-knap.png" alt="Bliv frivillig knap" class="frivillig-dropdown-knap" /></a>
+            </li>
+          </ul>
+          <a href="#">Om Radar</a>
+          <ul class="radar-dropdown-menu">
+            <li><a href="om-os.html">OM OS</a></li>
+            <li><a href="#">STØT OS</a></li>
+            <li><a href="#">LOKALE SAMARBEJDER</a></li>
+            <li><a href="#">VORES TEAM</a></li>
+            <li><a href="#">NYHEDER</a></li>
+            <li>
+              <a href="#"><img src="img/frivillig-knap.png" alt="Bliv frivillig knap" class="frivillig-dropdown-knap" /></a>
+            </li>
+          </ul>
+          <a href="#" id="faellesskab">Fællesskab</a>
+          <ul class="faellesskab-dropdown-menu">
+            <li><a href="#">BLIV FRIVILLIG</a></li>
+            <li><a href="bliv-medlem.html">BLIV MEDLEM</a></li>
+            <li><a href="#">RADAR-BLOG</a></li>
+            <li><a href="galleri.html">GALLERI</a></li>
+            <li><a href="#">MERCHANDISE</a></li>
+            <li>
+              <a href="#"><img src="img/frivillig-knap.png" alt="Bliv frivillig knap" class="frivillig-dropdown-knap" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- søg og profil ikoner -->
+        <div class="ikoner">
+          <img src="img/soeg.png" alt="Søg" class="ikon" />
+          <img src="img/profil.png" alt="Profil" class="ikon" />
+        </div>
+      </nav>
+    </header>
+
+    <!------------------------------------------ main starter ------------------------------------------>
+    <main class="grid-container">
+      <!-- brødkrummer -->
+      <nav class="breadcrumbs" aria-label="breadcrumb">Events > Kalender</nav>
+
+      <!-- overskrift -->
+      <div class="galleri-overskrift">
+        <h1 class="outline-overskrift">GALLERI</h1>
+      </div>
+
+      <!-- intro tekst -->
+      <p class="galleri-intro">Her kan du genopleve stemningen fra Radars koncerter og arrangementer. Klik på et billede for at se hele serien fra aftenen.</p>
+    </main>
+  </body>
+</html>

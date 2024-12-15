@@ -659,6 +659,21 @@ a {
   margin-bottom: 3rem;
 }
 
+/* ------------------------------------------------ kalender ------------------------------------------------ */
+/* -- overskrift -- */
+.galleri-overskrift {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0 0 2rem; /* top, højre, bund, venstre */
+}
+
+.galleri-intro{
+  display: grid;
+  margin: 2rem;
+}
+
 /* ------------------------------------------------ Media query for små tablets ------------------------------------------------ */
 @media (min-width: 600px) {
   /* ------------------------------------------------ navigationsbar ------------------------------------------------ */
@@ -1098,7 +1113,7 @@ a {
 
   /* -- understreget når man er inde på menupunktet -- */
   /* prettier-ignore */
-  #faellesskab, #omos {
+  #faellesskab, #omradar, #events {
     text-decoration: underline red;
   }
 
