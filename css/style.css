@@ -8,10 +8,7 @@
 }
 
 /* prettier-ignore */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, 
-footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -35,8 +32,7 @@ blockquote, q {
 	quotes: none;
 }
 /* prettier-ignore */
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
@@ -53,6 +49,10 @@ body {
   font-weight: 400;
   line-height: 1.5rem;
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ------------------------------------------------ navigationsbar ------------------------------------------------ */
@@ -913,13 +913,13 @@ body {
   }
 
   /* ------------------------------------------------ kalender ------------------------------------------------ */
-  .januar-sektion-mobil,
-  .februar-sektion-mobil {
+  /* prettier-ignore */
+  .januar-sektion-mobil, .februar-sektion-mobil {
     display: none;
   }
 
-  .januar-sektion-tablet,
-  .februar-sektion-tablet {
+  /* prettier-ignore */
+  .januar-sektion-tablet, .februar-sektion-tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -943,17 +943,17 @@ body {
 
   .laes-mere-overlay {
     position: absolute;
-    top: 50%;
+    top: 55%; /* pga. margin i toppen skal den længere ned for at være centreret */
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(206, 4, 4, 0.9); /* semi-transparent rød baggrund */
+    background-color: rgba(206, 4, 4, 0.9); /* rød baggrund */
     color: white;
     font-family: "Inter", sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     text-align: center;
-    opacity: 0; /* usynlig teksten til at starte med */
+    opacity: 0; /* usynlig tekst til at starte med */
     transition: opacity 0.3s ease; /* glidende overgang for visning */
   }
 
