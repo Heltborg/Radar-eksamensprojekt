@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLIV MEDLEM | RADAR LIVE</title>
+    <title>KALENDER | RADAR LIVE</title>
     <link rel="icon" type="image/png" href="img/sort-lille-logo.png" />
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css" />
@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
   </head>
-
   <!------------------------------------------ body starter ------------------------------------------>
   <body>
     <!------------------------------------------ header starter ------------------------------------------>
@@ -87,7 +86,7 @@
               <a href="#"><img src="img/frivillig-knap.png" alt="Bliv frivillig knap" class="frivillig-dropdown-knap" /></a>
             </li>
           </ul>
-          <a href="#" id="faellesskab">Fællesskab</a>
+          <a href="#">Fællesskab</a>
           <ul class="faellesskab-dropdown-menu">
             <li><a href="#">BLIV FRIVILLIG</a></li>
             <li><a href="bliv-medlem.html">BLIV MEDLEM</a></li>
@@ -109,84 +108,169 @@
     </header>
 
     <!------------------------------------------ main starter ------------------------------------------>
-    <main>
-      <nav class="breadcrumbs" aria-label="breadcrumb">Fællesskab > Bliv medlem</nav>
+    <main class="grid-container">
+      <!-- brødkrummer -->
+      <nav class="breadcrumbs" aria-label="breadcrumb">Events > Kalender</nav>
 
-      <!-- bliv medlem sektion -->
       <!-- overskrift -->
-      <section class="bliv-medlem-mobil">
-        <div id="bliv-medlem-overskrift">
-          <h1 class="outline-overskrift">BLIV</h1>
-          <h2 class="rod-overskrift">MEDLEM</h2>
-        </div>
-        <!-- mobil og tablet tekst -->
-        <p class="medlem-tablet-tekst">
-          Elsker du musik, og vil du være med til at støtte Aarhus' mest spændende spillested? <br />
-          Så bliv medlem af Radar!
-        </p>
-        <!-- desktop tekst -->
-        <div class="medlemstekst-div">
-          <p class="medlem-desktop-tekst">
-            Elsker du musik, og vil du være med til at støtte Aarhus' mest spændende spillested? <br />
-            Så bliv medlem af Radar!
-          </p>
-          <p class="medlem-desktop-tekst">
-            For kun 150 kr. om måneden får du en lang række fordele - og vigtigst af alt, du hjælper os med at fortsætte vores arbejde som et centralt kultursted i byen.
-          </p>
-          <p class="medlem-desktop-tekst">Bliv medlem i dag og gør en forskel for kulturen!</p>
-        </div>
-        <!-- billede -->
-        <img src="img/radar-facade.png" alt="Et billede af Radar" class="radar-facade" />
-        <!-- mobil og tablet tekst -->
-        <p class="bliv-medlem-tekst">For kun 150 kr. om måneden får du en lang række fordele - og samtidig hjælper du os med at fortsætte vores arbejde som et centralt kultursted i byen.</p>
-        <p class="bliv-medlem-tekst">Bliv medlem i dag og gør en forskel for kulturen!</p>
+      <h1 class="kalender-overskrift">JANUAR</h1>
+
+      <!-- januar billeder -->
+      <!-- mobil version -->
+      <section class="januar-sektion-mobil">
+        <img src="img/kalender/anna-roemer-mobil.png" alt="Billede af Anna Roemer" class="kalender-billede-mobil" />
+        <p class="lille-kalender-tekst">FÅ BILLETTER</p>
+        <img src="img/kalender/baryl-mobil.png" alt="Billede af Baryl" class="kalender-billede-mobil" />
       </section>
 
-      <!-- fordele sektion -->
-      <section class="fordele">
-        <img src="img/det-hiphop.png" alt="Billede af graffiti ved Radar" class="det-hiphop" />
-        <img src="img/det-hiphop-desktop.png" alt="Billede af graffiti ved Radar" class="det-hiphop-desktop" />
-        <h1 id="fordele-overskrift">FORDELE</h1>
-        <div class="fordele-tekst">
-          <p id="linje-et-fordele">Som medlem får du:</p>
-          <p>Rabat på koncertbilletter</p>
-          <ul>
-            <li class="punkt-tekst">Gør dine musikoplevelser endnu bedre!</li>
-          </ul>
-          <p>Rabat i baren</p>
-          <ul>
-            <li class="punkt-tekst">Spar lidt på dine drikkevarer, mens du nyder musikken</li>
-          </ul>
-          <p>Eksklusiv adgang til nyheder</p>
-          <ul>
-            <li class="punkt-tekst">Som medlem hører du altid om kommende koncerter og spændende tiltag før alle andre</li>
-          </ul>
+      <!-- tablet version -->
+      <section class="januar-sektion-tablet">
+        <div class="kalender-billede-container">
+          <img src="img/kalender/anna-roemer-mobil.png" alt="Billede af Anna Roemer" class="kalender-billede-tablet" />
+          <div class="laes-mere-overlay">LÆS MERE</div>
+          <p class="lille-kalender-tekst">FÅ BILLETTER</p>
         </div>
-        <div class="knap-container">
-          <a href="#"><button class="forside-knap">Bliv medlem</button></a>
-        </div>
-        <p id="slut-tekst-fordele">Dit medlemskab kan opsiges når som helst - der er ingen binding.</p>
-        <!-- tekst til desktop -->
-        <div class="fordele-tekst-desktop">
-          <p id="fordele-medlem-linje-et">Som medlem får du:</p>
-          <ul class="medlems-fordele">
-            <li>Rabat på koncertbilletter - gør dine musikoplevelser endnu bedre!</li>
-            <li>Rabat i baren - spar lidt på dine drikkevarer, mens du nyder musikken</li>
-            <li>Eksklusiv adgang til nyheder - som medlem hører du altid om kommende koncerter og spændende tiltag før alle andre</li>
-          </ul>
-        </div>
-        <div class="afsluttende-tekst-medlem">
-          <p>Dit medlemskab kan opsiges når som helst - der er ingen binding, og det er helt enkelt.</p>
-          <p>
-            Ved at blive medlem er du ikke kun med til at støtte Radar økonomisk - du er også med til at sikre, at vi fortsat kan være en platform for eksperimenterende musik, nye kunstnere og unikke
-            oplevelser i Aarhus.
-          </p>
-          <p id="sidste-linje-medlem">Bliv medlem i dag og gør en forskel for kulturen!</p>
-          <button class="medlem-knap-desktop">Bliv medlem</button>
+        <div class="kalender-billede-container">
+          <img src="img/kalender/baryl-mobil.png" alt="Billede af Baryl" class="kalender-billede-tablet" />
+          <div class="laes-mere-overlay">LÆS MERE</div>
         </div>
       </section>
+
+      <!-- desktop version -->
+      <section class="januar-sektion-desktop">
+        <div>
+          <img src="img/kalender/anna-roemer-desktop.png" alt="Billede af Anna Roemer" class="kalender-billede-desktop" />
+          <p class="artist-kalender-tekst">ANNA ROEMER</p>
+          <p class="dato-kalender-tekst">29. JANUAR 2025</p>
+          <p class="genre-kalender-tekst">SFÆRISK JAZZ</p>
+        </div>
+        <div>
+          <img src="img/kalender/baryl-desktop.png" alt="Billede af Baryl" class="kalender-billede-desktop" />
+          <p class="artist-kalender-tekst">BARYL</p>
+          <p class="dato-kalender-tekst">31. JANUAR 2025</p>
+          <p class="genre-kalender-tekst">JAZZ</p>
+        </div>
+      </section>
+
+      <!-- vandret streg -->
+      <hr class="horisontal-streg" />
+
+      <h1 class="kalender-overskrift">FEBRUAR</h1>
+      <!-- februar sektion -->
+      <section class="februar-sektion-mobil">
+        <img src="img/kalender/drag-mobil.png" alt="Billede af Aarhus Drag Extravaganza" class="kalender-billede-mobil" />
+        <img src="img/kalender/quade-yngel-mobil.png" alt="Billede af Quade og Yngel" class="kalender-billede-mobil" />
+        <img src="img/kalender/gorgeous-mobil.png" alt="Billede af Gorgeous" class="kalender-billede-mobil" />
+        <img src="img/kalender/bushbabies-mobil.png" alt="Billede af Bushbabies" class="kalender-billede-mobil" />
+        <img src="img/kalender/bissesvinet-mobil.png" alt="Billede af Bissesvinet" class="kalender-billede-mobil" />
+        <p class="lille-kalender-tekst">UDSOLGT</p>
+      </section>
+
+      <!-- tablet version -->
+      <section class="februar-sektion-tablet">
+        <!-- drag -->
+        <div class="kalender-billede-container">
+          <img src="img/kalender/drag-mobil.png" alt="Billede af Aarhus Drag Extravaganza" class="kalender-billede-tablet" />
+          <div class="laes-mere-overlay">LÆS MERE</div>
+        </div>
+
+        <!-- quade og yngel -->
+        <div class="kalender-billede-container">
+          <img src="img/kalender/quade-yngel-mobil.png" alt="Billede af Quade og Yngel" class="kalender-billede-tablet" />
+          <div class="laes-mere-overlay">LÆS MERE</div>
+        </div>
+
+        <!-- gorgeous -->
+        <div class="kalender-billede-container">
+          <img src="img/kalender/gorgeous-mobil.png" alt="Billede af Gorgeous" class="kalender-billede-tablet" />
+          <div class="laes-mere-overlay">LÆS MERE</div>
+        </div>
+
+        <!-- bushbabies -->
+        <div class="kalender-billede-container">
+          <img src="img/kalender/bushbabies-mobil.png" alt="Billede af Bushbabies" class="kalender-billede-tablet" />
+          <div class="laes-mere-overlay">LÆS MERE</div>
+        </div>
+
+        <!-- bissesvinet -->
+        <div>
+          <div class="kalender-billede-container">
+            <img src="img/kalender/bissesvinet-mobil.png" alt="Billede af Bissesvinet" class="kalender-billede-tablet" />
+            <div class="laes-mere-overlay">LÆS MERE</div>
+          </div>
+          <p class="lille-kalender-tekst">UDSOLGT</p>
+        </div>
+      </section>
+
+      <!-- desktop version -->
+      <section class="februar-sektion-desktop">
+        <!-- drag extravaganza -->
+        <div>
+          <img src="img/kalender/drag-desktop.png" alt="Billede af Aarhus Drag Extravaganza" class="kalender-billede-desktop" />
+          <p class="artist-kalender-tekst">DRAG EXTRAVAGANZA</p>
+          <p class="dato-kalender-tekst">1. FEBRUAR 2025</p>
+          <p class="genre-kalender-tekst">SHOW</p>
+        </div>
+
+        <!-- quade og yngel -->
+        <div>
+          <img src="img/kalender/quade-yngel-desktop.png" alt="Billede af Quade og Yngel" class="kalender-billede-desktop" />
+          <p class="artist-kalender-tekst">QUADE & YNGEL</p>
+          <p class="dato-kalender-tekst">5. FEBRUAR 2025</p>
+          <p class="genre-kalender-tekst">DUB, DRONE, AMBIENT & POST-ROCK</p>
+        </div>
+
+        <!-- gorgeous -->
+        <div>
+          <img src="img/kalender/gorgeous-desktop.png" alt="Billede af Gorgeous" class="kalender-billede-desktop" />
+          <p class="artist-kalender-tekst">GORGEOUS</p>
+          <p class="dato-kalender-tekst">6. FEBRUAR 2025</p>
+          <p class="genre-kalender-tekst">POP</p>
+        </div>
+
+        <!-- bushbabies -->
+        <div>
+          <img src="img/kalender/bushbabies-desktop.png" alt="Billede af Bushbabies" class="kalender-billede-desktop" />
+          <p class="artist-kalender-tekst">BUSHBABIES</p>
+          <p class="dato-kalender-tekst">7. FEBRUAR 2025</p>
+          <p class="genre-kalender-tekst">JAZZ/AFROBEAT/CUMBIA/HIGHLIFE</p>
+        </div>
+
+        <!-- bissesvinet -->
+        <div>
+          <img src="img/kalender/bissesvinet-desktop.png" alt="Billede af Bissesvinet" class="kalender-billede-desktop" />
+          <p class="artist-kalender-tekst">BISSESVINET</p>
+          <p class="dato-kalender-tekst">14. FEBRUAR 2025</p>
+          <p class="genre-kalender-tekst">SKINHELLIG DØDSROCK</p>
+        </div>
+
+        <!-- syl og omsorg -->
+        <div>
+          <img src="img/kalender/syl-omsorg-desktop.png" alt="Billede af Syl + Omsorg" class="kalender-billede-desktop" />
+          <p class="artist-kalender-tekst">SYL + OMSORG</p>
+          <p class="dato-kalender-tekst">15. FEBRUAR 2025</p>
+          <p class="genre-kalender-tekst">HARDCORE, POST-PUNK & NOISE ROCK</p>
+        </div>
+
+        <!-- otooto -->
+        <div>
+          <img src="img/kalender/otooto-desktop.png" alt="Billede af Otooto" class="kalender-billede-desktop" />
+          <p class="artist-kalender-tekst">OTOOTO</p>
+          <p class="dato-kalender-tekst">22. FEBRUAR 2025</p>
+          <p class="genre-kalender-tekst">JAZZ</p>
+        </div>
+      </section>
+
+      <!-- vandret streg -->
+      <div class="streg-desktop">
+        <hr class="horisontal-streg" />
+      </div>
+
+      <!-- knap -->
+      <div class="knap-container">
+        <button class="kalender-knap">Læs mere</button>
+      </div>
     </main>
-
     <!------------------------------------------ footer ------------------------------------------>
     <footer>
       <div class="footer-mobil">
