@@ -618,11 +618,12 @@ a {
 /* ------------------------------------------------ kalender ------------------------------------------------ */
 
 /* prettier-ignore */
-.januar-sektion-tablet, .januar-sektion-desktop, .februar-sektion-tablet, .februar-sektion-desktop, .streg-desktop {
+.januar-sektion-tablet, .januar-sektion-desktop, .februar-sektion-tablet, .februar-sektion-desktop, .marts-sektion-desktop, .april-sektion-desktop, .maj-sektion-desktop, .streg-desktop, .desktop-kalender-overskrift {
   display: none;
 }
 /* -- overskrift -- */
-.kalender-overskrift {
+/* prettier-ignore */
+.kalender-overskrift, .desktop-kalender-overskrift {
   text-align: left;
   font-size: 3rem;
   margin: 2rem 0 1rem 2rem;
@@ -914,7 +915,7 @@ a {
 
   /* ------------------------------------------------ kalender ------------------------------------------------ */
   /* prettier-ignore */
-  .januar-sektion-mobil, .februar-sektion-mobil {
+  .januar-sektion-mobil, .februar-sektion-mobil, .desktop-kalender-overskrift {
     display: none;
   }
 
@@ -1603,14 +1604,19 @@ a {
     display: none;
   }
 
-  .kalender-overskrift {
+  .desktop-kalender-overskrift {
+    display: grid;
+  }
+
+  /* prettier-ignore */
+  .kalender-overskrift, .desktop-kalender-overskrift {
     font-size: 4rem;
     margin-bottom: 3rem;
   }
 
   /* -- måneder -- */
   /* prettier-ignore */
-  .januar-sektion-desktop, .februar-sektion-desktop {
+  .januar-sektion-desktop, .februar-sektion-desktop, .marts-sektion-desktop, .april-sektion-desktop, .maj-sektion-desktop {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -1642,7 +1648,6 @@ a {
 
   .kalender-billede-desktop {
     display: block;
-    transition: filter 0.3s ease; /* Glidende overgang ved sløring */
   }
 
   .streg-desktop {
