@@ -68,7 +68,6 @@ a {
 
 /* -- logo -- */
 .lille-logo {
-  grid-area: "lille-logo";
   width: auto;
   max-width: 2rem;
 }
@@ -83,7 +82,6 @@ a {
 .menu-ikon {
   display: block;
   width: 2rem;
-  grid-area: "burgermenu";
 }
 
 .menu-ikon img {
@@ -118,7 +116,18 @@ a {
 }
 
 .menu-items li {
+  position: relative;
   padding: 0.5rem 0;
+}
+
+.menu-items li ul {
+  display: none; /* Skjul dropdown-menu som standard */
+  top: 100%;
+  left: 0;
+  background-color: #ce3434;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu-items a {
@@ -133,28 +142,16 @@ a {
   text-decoration: underline white;
 }
 
-/* Juster skrifttype for alle ekstra punkter */
+/* -- Juster skrifttype for alle ekstra punkter -- */
 .events-extra-items li a,
 .radar-extra-items li a,
 .faellesskab-extra-items li a {
   font-size: 1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
-.menu-items ul > li:first-child:hover + .events-extra-items,
-.events-extra-items:hover {
-  display: block;
-}
-
-/* Vis radar-extra-items ved hover over OM RADAR */
-.menu-items ul > li:nth-child(3):hover + .radar-extra-items,
-.radar-extra-items:hover {
-  display: block;
-}
-
-/* Vis faellesskab-extra-items ved hover over FÆLLESSKAB */
-.menu-items ul > li:nth-child(5):hover + .faellesskab-extra-items,
-.faellesskab-extra-items:hover {
+/* -- Vis dropdown-menu ved hover -- */
+.menu-items li:hover > ul {
   display: block;
 }
 
@@ -516,7 +513,7 @@ a {
   z-index: 1;
 }
 
-#historien-bag-rod-overskrift {
+.historien-bag-rod-overskrift {
   grid-column: 1;
   font-size: 3rem;
   color: #ce0404;
@@ -525,7 +522,7 @@ a {
   line-height: 1;
 }
 
-#radar-outline-overskrift {
+.radar-outline-overskrift {
   grid-column: 1;
   font-size: 3rem;
   color: #f3f3f3;
@@ -544,7 +541,6 @@ a {
 }
 
 .historie-mobil-tekst p {
-  grid-column: 1fr;
   margin: 0 2rem 1rem 2rem;
 }
 
@@ -571,7 +567,7 @@ a {
 }
 
 /* -- overskrift -- */
-#stot-musikken-outline-overskrift {
+.stot-musikken-outline-overskrift {
   grid-column: 1 /-1;
   font-size: 2rem;
   color: transparent;
@@ -581,7 +577,7 @@ a {
   line-height: 1;
 }
 
-#og-fa-outline-overskrift {
+.og-fa-outline-overskrift {
   grid-column: 1;
   font-size: 2rem;
   color: #f3f3f3;
@@ -592,7 +588,7 @@ a {
   z-index: 1;
 }
 
-#fordele-rod-overskrift {
+.fordele-rod-overskrift {
   grid-column: 2;
   font-size: 2rem;
   color: #ce0404;
@@ -710,7 +706,6 @@ a {
 
   /* -- stort logo styling -- */
   .stort-logo {
-    grid-area: "stort-logo";
     display: block;
     max-width: 70%;
     height: auto;
@@ -897,7 +892,7 @@ a {
     display: none;
   }
 
-  #radar-outline-overskrift {
+  .radar-outline-overskrift {
     z-index: 2;
   }
 
@@ -929,12 +924,12 @@ a {
 
   /* -- støt musikken sektion -- */
   /* prettier-ignore */
-  #stot-musikken-outline-overskrift, #og-fa-outline-overskrift, #fordele-rod-overskrift {
+  .stot-musikken-outline-overskrift, .og-fa-outline-overskrift, .fordele-rod-overskrift {
     font-size: 3rem;
     -webkit-text-stroke: 2px #ce0404;
   }
 
-  #stot-musikken-outline-overskrift {
+  .stot-musikken-outline-overskrift {
     margin-left: 5rem;
   }
 
@@ -1049,7 +1044,6 @@ a {
 
   /* -- stort logo styling -- */
   .stort-logo {
-    grid-area: "stort-logo";
     display: block;
     max-width: 85%;
     height: auto;
@@ -1066,7 +1060,6 @@ a {
 
   /* -- menupunkter styling -- */
   .menupunkter {
-    grid-area: "menupunkter";
     display: flex;
     position: relative;
     justify-content: flex-end;
@@ -1152,7 +1145,6 @@ a {
 
   /* -- søg og profil ikon styling samlet -- */
   .ikoner {
-    grid-area: "ikoner";
     display: flex;
     justify-content: flex-end;
     gap: 3rem;
@@ -1572,14 +1564,14 @@ a {
   }
 
   /* -- ovverskrift historien bag -- */
-  #radar-outline-overskrift {
+  .radar-outline-overskrift {
     font-size: 4.5rem;
     margin-right: 12rem;
     z-index: 1;
   }
 
   /* -- overskrift radar -- */
-  #historien-bag-rod-overskrift {
+  .historien-bag-rod-overskrift {
     font-size: 4.5rem;
     justify-self: center;
     margin-left: 31.5rem;
@@ -1616,17 +1608,17 @@ a {
   }
 
   /* -- overskrift -- */
-  #stot-musikken-outline-overskrift {
+  .stot-musikken-outline-overskrift {
     font-size: 5rem;
     margin-left: 3rem;
   }
 
-  #og-fa-outline-overskrift {
+  .og-fa-outline-overskrift {
     font-size: 5rem;
     margin-right: -6rem;
   }
 
-  #fordele-rod-overskrift {
+  .fordele-rod-overskrift {
     font-size: 5rem;
     margin-left: 6rem;
   }
