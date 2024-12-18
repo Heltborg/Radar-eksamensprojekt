@@ -918,7 +918,7 @@ a {
   }
 
   .foto-bar-desktop img {
-    height: 60vh; /* 40% af viewportens højde */
+    height: 60vh; /* 60% af viewportens højde */
     margin-bottom: 3rem;
   }
 
